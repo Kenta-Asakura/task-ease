@@ -1,6 +1,6 @@
 import React from "react";
 
-const ConceptItem = ({ props }) => {
+const ConceptItem = (props) => {
   return (
     <ul id="concepts">
       <li className="concept">
