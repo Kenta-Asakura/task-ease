@@ -8,15 +8,14 @@ const Concepts = ({ items }) => {
     //   title={items[0].title}
     //   description={items[0].description}
     // />
-    <div>
+    <div id='concepts'>
       {items.map((item) => (
-        <ConceptItem
-          image={item.image}
-          title={item.title}
-          description={item.description}
-        />
+          <ConceptItem
+            image={item.image}
+            title={item.title}
+            description={item.description}
+          />
       ))}
-      ;
     </div>
   );
 };
