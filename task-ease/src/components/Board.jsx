@@ -1,9 +1,7 @@
 import Task from "./Task";
 
-function Board() {
+export default function Board() {
   return (
     <Task></Task>
   )
 }
-
-export default Board;
