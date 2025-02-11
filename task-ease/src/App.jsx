@@ -2,7 +2,7 @@ import { useState } from 'react'
 import KanbanPage from './pages/KanbanPage'
 import './App.css'
 
-export default function App() {
+function App() {
   const [count, setCount] = useState(0)
 
   return (
@@ -10,4 +10,6 @@ export default function App() {
       <KanbanPage></KanbanPage>
     </>
   )
-}
+};
+
+export default App;

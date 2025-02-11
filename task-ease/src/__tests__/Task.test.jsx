@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import Task from "../components/Task";
 
-test("renders task with correct title and description", () => {
+test("renders task with dynamic title and description", () => {
   const task = {
-    title: "Test Task",
-    description: "Test Description",
+    title: "Dynamic Task Title",
+    description: "Dynamic Task Description"
   };
 
-  render(<Task task={task} />);
+  render(<Task title={task.title} description={task.description} />);
 
-  expect(screen.getByText("Test Task")).toBeInTheDocument();
-  expect(screen.getByText("Test Description")).toBeInTheDocument();
+  expect(screen.getByText(task.title)).toBeInTheDocument();
+  expect(screen.getByText(task.description)).toBeInTheDocument();
 });

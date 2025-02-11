@@ -1,7 +1,9 @@
-import Task from "./Task";
+import Column from "./Column";
 
-export default function Board() {
+function Board() {
   return (
-    <Task></Task>
+    <Column />
   )
-}
+};
+
+export default Board;

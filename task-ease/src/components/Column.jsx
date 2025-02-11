@@ -1,10 +1,16 @@
 import Task from "./Task";
 
-export default function Column({ title, tasks }) {
+function Column() {
   return (
     <>
       <div className="bg-gray-100 p-4"></div>
-      <Task></Task>
+
+      <Task
+        title="Test Title"
+        description="Test Description"
+      />
     </>
   )
 };
+
+export default Column;

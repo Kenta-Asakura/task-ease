@@ -1,5 +1,7 @@
-export default function TaskForm() {
+function TaskForm() {
   return (
     <></>
   )
-}
+};
+
+export default TaskForm;

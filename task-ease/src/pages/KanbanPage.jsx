@@ -1,7 +1,9 @@
 import Board from "../components/Board";
 
-export default function KanbanPage() {
+function KanbanPage() {
   return (
     <Board></Board>
   )
 }
+
+export default KanbanPage;
