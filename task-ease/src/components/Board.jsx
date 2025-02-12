@@ -2,7 +2,7 @@ import Column from "./Column";
 
 function Board() {
   return (
-    <>
+    <div className="flex">
       <Column
         title="Done"
       />
@@ -10,7 +10,11 @@ function Board() {
       <Column
         title="Next"
       />
-    </>
+
+      <Column
+        title="Now"
+      />
+    </div>
   )
 };
 
