@@ -2,7 +2,9 @@ import Board from "../components/Board";
 
 function KanbanPage() {
   return (
-    <Board></Board>
+    <div className="min-h-screen bg-gray-800">
+      <Board />
+    </div>
   )
 }
 
