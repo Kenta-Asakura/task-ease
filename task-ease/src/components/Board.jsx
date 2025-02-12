@@ -2,7 +2,15 @@ import Column from "./Column";
 
 function Board() {
   return (
-    <Column />
+    <>
+      <Column
+        title="Done"
+      />
+
+      <Column
+        title="Next"
+      />
+    </>
   )
 };
 
