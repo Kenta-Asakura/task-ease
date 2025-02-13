@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import NavBar from './components/NavBar'
 import KanbanPage from './pages/KanbanPage'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <KanbanPage></KanbanPage>
     </div>
   )
