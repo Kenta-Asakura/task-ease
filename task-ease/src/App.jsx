@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
+import SideBar from './components/SideBar'
 import KanbanPage from './pages/KanbanPage'
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
   return (
     <div>
       <NavBar />
+
+      <SideBar />
+
       <KanbanPage></KanbanPage>
     </div>
   )
