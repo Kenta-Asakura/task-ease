@@ -10,7 +10,7 @@ function App() {
     <div>
       <NavBar />
 
-      <SideBar />
+      {/* <SideBar /> */}
 
       <KanbanPage></KanbanPage>
     </div>
