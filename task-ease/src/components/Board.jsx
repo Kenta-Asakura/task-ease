@@ -1,4 +1,5 @@
 import Column from "./Column";
+import CreateTaskForm from "./CreateTaskForm";
 
 function Board() {
   return (
@@ -11,6 +12,8 @@ function Board() {
         <Column title="Now" />
 
         <Column title="New" />
+
+        <CreateTaskForm />
       </div>
     </div>
   );
