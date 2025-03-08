@@ -3,7 +3,27 @@ import SideBar from '../components/SideBar';
 import Board from "../components/Board";
 import CreateTaskForm from "../components/CreateTaskForm";
 
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 function KanbanPage() {
+  const [tasks, setTasks] = useState([]);
+
+  // Load tasks from localStorage on first render (Initial render)
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    setTasks(storedTasks);
+  }, []);
+
+  // Save tasks to localStorage whenever tasks change (Re-render)
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  // CRUD operations
+  // - Create task
+  // - Update task
+  // - Delete task
   return (
     <>
       <NavBar />
