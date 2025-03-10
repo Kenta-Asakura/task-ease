@@ -1,6 +1,4 @@
 function Task({ heading, description }) {
-  console.log("Props received in Task:", heading, description ); // ✅ Debugging
-
   return (
     <li className="list-none">
       <article className="bg-white shadow-md p-4 rounded-md border border-gray-200">
