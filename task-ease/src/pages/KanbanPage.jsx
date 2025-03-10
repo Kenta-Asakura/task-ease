@@ -11,13 +11,16 @@ function KanbanPage() {
 
   // Load tasks from localStorage on first render (Initial render)
   useEffect(() => {
+    // console.log("Before fetching tasks:", localStorage.getItem("tasks")); // Debugging
     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    console.log("Loaded tasks:", storedTasks); // ✅ Debugging
+
+    // console.log("Loaded tasks:", storedTasks); // Debugging
     setTasks(storedTasks);
   }, []);
 
   // Save tasks to localStorage whenever tasks change (Re-render)
   useEffect(() => {
+    if (tasks.length === 0) return;
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
