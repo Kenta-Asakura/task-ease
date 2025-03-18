@@ -35,8 +35,8 @@ function KanbanPage() {
       {/* <SideBar /> */}
 
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
-        <Board />
-        <CreateTaskForm />
+        <Board tasks={tasks} />
+        <CreateTaskForm setTasks={setTasks} />
       </div>
     </>
   )
