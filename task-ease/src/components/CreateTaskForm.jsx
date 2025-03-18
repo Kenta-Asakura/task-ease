@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid"; // Import UUID for unique IDs
 function CreateTaskForm({ setTasks }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("New");
 
   // test
   // console.log(typeof title);
@@ -27,6 +27,7 @@ function CreateTaskForm({ setTasks }) {
     // reset input fields
     setTitle("");
     setDescription("");
+    setStatus("New");
   };
 
   return (
@@ -59,13 +60,16 @@ function CreateTaskForm({ setTasks }) {
           onChange={(e) => setDescription(e.target.value)}
         />
 
-        <input
-          className="status bg-gray-100 border border-gray-300 p-2 outline-none"
-          spellCheck="false"
-          placeholder="Status"
-          type="text"
+        <select
+          className="bg-gray-100 border border-gray-300 p-2 mb-4 outline-none"
+          value={status}
           onChange={(e) => setStatus(e.target.value)}
-        />
+        >
+          <option value="New">New</option>
+          <option value="Now">Now</option>
+          <option value="Next">Next</option>
+          <option value="Done">Done</option>
+        </select>
 
         <div className="buttons flex mt-4">
           <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer
