@@ -23,12 +23,16 @@ function CreateTaskForm() {
         />
 
         <div className="buttons flex mt-4">
-          <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">
+          <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer
+                          text-gray-500 ml-auto transition duration-200
+                          hover:bg-gray-300 hover:text-gray-900">
             Cancel
           </div>
 
-          <div className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">
-            Post
+          <div className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer
+                          text-gray-200 ml-2 bg-indigo-500 transition duration-200
+                          hover:bg-indigo-600 hover:border-indigo-600">
+              Post
           </div>
         </div>
       </div>
