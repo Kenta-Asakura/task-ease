@@ -26,6 +26,10 @@ function KanbanPage() {
 
   // CRUD operations
   // - Create task
+const addTask = (newTask) => {
+  setTasks((prevTasks) => [...prevTasks, newTask]);
+}
+
   // - Update task
   // - Delete task
   return (
