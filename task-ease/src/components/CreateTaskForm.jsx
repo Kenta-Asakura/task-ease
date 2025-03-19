@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid"; // Import UUID for unique IDs
 
-function CreateTaskForm({ setTasks }) {
+function CreateTaskForm({ setTasks, setShowForm }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("New");
@@ -11,6 +11,8 @@ function CreateTaskForm({ setTasks }) {
   // console.log('title - ', title);
   // console.log(typeof description);
   // console.log('description - ', description);
+
+  console.log(setShowForm);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,22 +30,25 @@ function CreateTaskForm({ setTasks }) {
     setTitle("");
     setDescription("");
     setStatus("New");
+
+    // hide form
+    setShowForm(false);
   };
 
   return (
     <form
+      onSubmit={handleSubmit}
       className="fixed z-[500] inset-0
         flex justify-center items-center
         bg-black bg-opacity-30"
-      onSubmit={handleSubmit}
     >
 
       <div
         className="editor
-        flex justify-center flex-col gap-y-4
-        mx-auto w-6/12
-        bg-gray-800 border-gray-700
-        text-gray-800 border p-4 shadow-lg max-w-2xl"
+          flex justify-center flex-col gap-y-4
+          mx-auto w-6/12
+          bg-gray-800 border-gray-700
+          text-gray-800 border p-4 shadow-lg max-w-2xl"
       >
         <input
           className="title bg-gray-100 border border-gray-300 p-2 outline-none"
@@ -74,18 +79,21 @@ function CreateTaskForm({ setTasks }) {
         </select>
 
         <div className="buttons flex mt-4">
-          <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer
+          <button
+            type="button"
+            onClick={() => setShowForm(false)}
+            className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer
                           text-gray-500 ml-auto transition duration-200
                           hover:bg-gray-300 hover:text-gray-900"
           >
             Cancel
-          </div>
+          </button>
 
           <button
+            type="submit"
             className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer
                           text-gray-200 ml-2 bg-indigo-500 transition duration-200
                           hover:bg-indigo-600 hover:border-indigo-600"
-            type="submit"
           >
             Post
           </button>

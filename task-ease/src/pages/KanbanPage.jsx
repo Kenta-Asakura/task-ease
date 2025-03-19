@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 
 function KanbanPage() {
   const [tasks, setTasks] = useState([]);
+  const [showForm, setShowForm] = useState('false');
 
   // Load tasks from localStorage on first render (Initial render)
   useEffect(() => {
@@ -26,21 +27,24 @@ function KanbanPage() {
 
   // CRUD operations
   // - Create task
-const addTask = (newTask) => {
-  setTasks((prevTasks) => [...prevTasks, newTask]);
-}
-
+  const addTask = (newTask) => {
+    setTasks((prevTasks) => [...prevTasks, newTask]);
+  }
   // - Update task
   // - Delete task
+
+  console.log("Show Form:", showForm);
+
   return (
     <>
-      <NavBar />
+      <NavBar toggleForm={() => setShowForm(true)} />
 
       {/* <SideBar /> */}
 
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board tasks={tasks} />
-        <CreateTaskForm setTasks={setTasks} />
+
+        {showForm && <CreateTaskForm setTasks={setTasks} setShowForm={setShowForm}/>}
       </div>
     </>
   )
