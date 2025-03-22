@@ -57,6 +57,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
 
         <textarea
@@ -65,6 +66,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          required
         />
 
         <select
