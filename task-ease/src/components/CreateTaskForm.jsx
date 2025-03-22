@@ -6,8 +6,6 @@ function CreateTaskForm({ setTasks, setShowForm }) {
   const [description, setDescription] = useState("");
   const [status, setStatus] = useState("New");
 
-  console.log(setShowForm);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -29,9 +27,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
     setShowForm(false);
   };
 
-  const handleOutsideClick = (e) => {
-    e.target.id === "form-overlay" && setShowForm(false);
-  };
+  const handleOutsideClick = (e) => e.target.id === "form-overlay" && setShowForm(false);;
 
   return (
     <div
@@ -41,11 +37,10 @@ function CreateTaskForm({ setTasks, setShowForm }) {
       bg-black bg-opacity-30"
       onClick={handleOutsideClick}
     >
-      <form onSubmit={handleSubmit} className="flex items-center">
+      <form onSubmit={handleSubmit} className="flex items-center basis-6/12">
 
         <div className="editor
-            flex justify-center flex-col gap-y-4
-            mx-auto p-4 max-w-2xl
+            flex basis-full justify-center flex-col gap-y-4 p-4
             bg-gray-800 border-gray-700
             border shadow-lg text-gray-800 "
         >
