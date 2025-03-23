@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 function KanbanPage() {
   const [tasks, setTasks] = useState([]);
-  const [showForm, setShowForm] = useState('false');
+  const [showForm, setShowForm] = useState(false);
 
   // Load tasks from localStorage on first render (Initial render)
   useEffect(() => {
@@ -43,8 +43,7 @@ function KanbanPage() {
 
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board tasks={tasks} />
-
-        {showForm && <CreateTaskForm setTasks={setTasks} setShowForm={setShowForm}/>}
+        {showForm && <CreateTaskForm setTasks={setTasks} setShowForm={setShowForm} />}
       </div>
     </>
   )

@@ -23,5 +23,8 @@ describe('CreateTaskForm', () => {
   //   // Fill out the form
   //   fireEvent.change(screen.getByPlaceholderText("Title"), { target: { value: "New Task" } });
   //   fireEvent.change(screen.getByPlaceholderText("Description"), { target: { value: "Task Description" } });
-  // })
+  // });
+
+  // test("does not submit when title or description is empty", () => {
+  // });
 });

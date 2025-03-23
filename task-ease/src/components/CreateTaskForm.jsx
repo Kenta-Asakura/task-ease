@@ -42,7 +42,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
         <div className="editor
             flex basis-full justify-center flex-col gap-y-4 p-4
             bg-gray-800 border-gray-700
-            border shadow-lg text-gray-800 "
+            border shadow-lg text-gray-800"
         >
           <input
             className="title bg-gray-100 border border-gray-300 p-2 outline-none"
