@@ -25,6 +25,11 @@ function KanbanPage() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
+  // ! For Testing - uncomment to CLEAR EVERYTHING
+  // useEffect(() => {
+  //   localStorage.clear();
+  // }, []);
+
   // CRUD operations
   // - Create task
   const addTask = (newTask) => {
@@ -32,8 +37,6 @@ function KanbanPage() {
   }
   // - Update task
   // - Delete task
-
-  console.log("Show Form:", showForm);
 
   return (
     <>
