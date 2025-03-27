@@ -16,7 +16,7 @@ function Board({ tasks }) {
         <Column title="New" tasks={tasks.filter(task => task.status === "New")} />
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default Board;

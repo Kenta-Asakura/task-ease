@@ -22,7 +22,7 @@ function Column({ title, tasks }) {
         ))};
       </div>
     </div>
-  );
-}
+  )
+};
 
 export default Column;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Modal from "./ui/Modal";
 
 function CreateTaskForm({ setTasks, setShowForm }) {
   const [title, setTitle] = useState("");
@@ -27,16 +28,8 @@ function CreateTaskForm({ setTasks, setShowForm }) {
     setShowForm(false);
   };
 
-  const handleOutsideClick = (e) => e.target.id === "form-overlay" && setShowForm(false);;
-
   return (
-    <div
-      id="form-overlay"
-      className="fixed z-[500] inset-0
-      flex justify-center
-      bg-black bg-opacity-30"
-      onClick={handleOutsideClick}
-    >
+    <Modal id="form-overlay" onClose={() => setShowForm(false)} >
       <form onSubmit={handleSubmit} className="flex items-center basis-6/12">
 
         <div className="editor
@@ -96,8 +89,8 @@ function CreateTaskForm({ setTasks, setShowForm }) {
         </div>
 
       </form>
-    </div>
-  );
-}
+    </Modal>
+  )
+};
 
 export default CreateTaskForm;

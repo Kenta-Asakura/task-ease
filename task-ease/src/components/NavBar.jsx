@@ -26,6 +26,5 @@ function NavBar({ toggleForm }) {
       </nav>
     </header>
   )
-}
-
+};
 export default NavBar;
