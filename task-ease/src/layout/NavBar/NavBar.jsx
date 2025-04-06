@@ -1,5 +1,5 @@
 import logo from "../../assets/task-ease.png";
-import EllipsisButton from "../../components/ui/Button/EllipsisButton";
+import EllipsisButton from "../../components/ui/Buttons/EllipsisButton";
 
 
 function NavBar({ toggleForm }) {

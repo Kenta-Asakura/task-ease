@@ -1,8 +1,8 @@
 import NavBar from '../layout/NavBar/NavBar';
 // import SideBar from '../components/SideBar';
 import Board from "../components/Board/Board";
-import CreateTaskForm from "../components/CreateTaskForm";
-import EditTaskForm from '../components/Task/EditTaskForm';
+import CreateTaskForm from "../components/Task/CreateTaskForm/CreateTaskForm";
+import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
 
 import { useState } from 'react';
 import { useEffect } from 'react';

@@ -1,4 +1,4 @@
-import Modal from "../ui/Modal/Modal";
+import Modal from "../../ui/Modals/Modal";
 
 function EditTaskForm() {
   return (

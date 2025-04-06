@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Task from "./Task";
+import TaskCard from "./TaskCard";
 
 describe("Task component", () => {
   test("renders task with dynamic title and description", () => {
@@ -8,7 +8,7 @@ describe("Task component", () => {
       description: "Dynamic Task Description",
     };
 
-    render(<Task heading={task.heading} description={task.description} />);
+    render(<TaskCard heading={task.heading} description={task.description} />);
 
     expect(screen.getByText(task.heading)).toBeInTheDocument();
     expect(screen.getByText(task.description)).toBeInTheDocument();

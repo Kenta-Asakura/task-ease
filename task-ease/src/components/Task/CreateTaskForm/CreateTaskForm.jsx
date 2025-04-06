@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import Modal from "./ui/Modal/Modal";
+import Modal from "../../ui/Modals/Modal";
 
 function CreateTaskForm({ setTasks, setShowForm }) {
   const [title, setTitle] = useState("");
