@@ -1,5 +1,5 @@
 import { render, renderHook, screen } from "@testing-library/react";
-import CreateTaskForm from "../components/CreateTaskForm";
+import CreateTaskForm from "./CreateTaskForm";
 
 describe('CreateTaskForm', () => {
   test('renders form elements correctly', () => {

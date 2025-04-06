@@ -1,7 +1,8 @@
 import NavBar from '../components/NavBar';
-import SideBar from '../components/SideBar';
+// import SideBar from '../components/SideBar';
 import Board from "../components/Board";
 import CreateTaskForm from "../components/CreateTaskForm";
+import EditTaskForm from '../components/Task/EditTaskForm';
 
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -35,7 +36,10 @@ function KanbanPage() {
   const addTask = (newTask) => {
     setTasks((prevTasks) => [...prevTasks, newTask]);
   }
+
   // - Update task
+
+
   // - Delete task
 
   return (
@@ -46,7 +50,10 @@ function KanbanPage() {
 
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board tasks={tasks} />
+
         {showForm && <CreateTaskForm setTasks={setTasks} setShowForm={setShowForm} />}
+        {/* <EditTaskForm></EditTaskForm> */}
+        {/* TaskModal */}
       </div>
     </>
   )
