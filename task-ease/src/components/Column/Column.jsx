@@ -1,4 +1,4 @@
-import Task from "./Task/Task";
+import Task from "../Task/Task";
 
 function Column({ title, tasks }) {
   // test

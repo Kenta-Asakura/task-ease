@@ -1,6 +1,6 @@
-import NavBar from '../components/NavBar';
+import NavBar from '../layout/NavBar/NavBar';
 // import SideBar from '../components/SideBar';
-import Board from "../components/Board";
+import Board from "../components/Board/Board";
 import CreateTaskForm from "../components/CreateTaskForm";
 import EditTaskForm from '../components/Task/EditTaskForm';
 

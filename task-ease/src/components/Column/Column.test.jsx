@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Column from "../components/Column";
+import Column from "./Column";
 
 describe("Column component", () => {
   test("renders with a title", () => {
