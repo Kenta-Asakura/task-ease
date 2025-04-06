@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Task from "../components/Task";
+import Task from "./Task";
 
 describe("Task component", () => {
   test("renders task with dynamic title and description", () => {
