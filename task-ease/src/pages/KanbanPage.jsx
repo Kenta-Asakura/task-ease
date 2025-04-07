@@ -2,6 +2,7 @@ import NavBar from '../layout/NavBar/NavBar';
 // import SideBar from '../components/SideBar';
 import Board from "../components/Board/Board";
 import CreateTaskForm from "../components/Task/CreateTaskForm/CreateTaskForm";
+import TaskModal from '../components/Task/TaskModal/TaskModal';
 import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
 
 import { useState } from 'react';
@@ -51,9 +52,19 @@ function KanbanPage() {
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board tasks={tasks} />
 
-        {showForm && <CreateTaskForm setTasks={setTasks} setShowForm={setShowForm} />}
-        {/* <EditTaskForm></EditTaskForm> */}
+        {showForm &&
+          <CreateTaskForm
+            setTasks={setTasks}
+            setShowForm={setShowForm}
+          />
+        }
+
         {/* TaskModal */}
+        {/* <TaskModal
+          task={selectedTask}
+        /> */}
+
+        {/* <EditTaskForm></EditTaskForm> */}
       </div>
     </>
   )

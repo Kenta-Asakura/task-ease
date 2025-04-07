@@ -6,6 +6,6 @@ function EllipsisButton() {
       </svg>
     </button>
   )
-}
+};
 
 export default EllipsisButton;
