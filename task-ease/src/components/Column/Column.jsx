@@ -1,4 +1,4 @@
-import Task from "../Task/TaskCard/TaskCard";
+import TaskCard from "../Task/TaskCard/TaskCard";
 
 function Column({ title, tasks }) {
   // test
@@ -14,10 +14,11 @@ function Column({ title, tasks }) {
 
         {/* test */}
         {tasks.map((task) => ( // ?
-          <Task
+          <TaskCard
             heading={task.title}
             description={task.description}
             key={task.id} // ?
+            
           />
         ))};
       </div>

@@ -15,7 +15,10 @@ function TaskModal() {
           {/* Ellipsis Btn */}
           {/* Status */}
 
-          <StatusDropdown currentStatus={status} setStatus={setStatus} />
+          <StatusDropdown
+            // currentStatus={status}
+            // setStatus={setStatus}
+          />
         </div>
       </form>
     </Modal>
