@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Modal from "../../ui/Modals/Modal";
+import StatusDropdown from "../../ui/Dropdown/StatusDropdown";
 
 function CreateTaskForm({ setTasks, setShowForm }) {
   const [title, setTitle] = useState("");
@@ -56,15 +57,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
             required
           />
 
-          <select className="bg-gray-100 border border-gray-300 p-2 mb-4 outline-none"
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-          >
-            <option value="New">New</option>
-            <option value="Now">Now</option>
-            <option value="Next">Next</option>
-            <option value="Done">Done</option>
-          </select>
+          <StatusDropdown currentStatus={status} setStatus={setStatus} />
 
           <div className="buttons flex mt-4">
             <button
