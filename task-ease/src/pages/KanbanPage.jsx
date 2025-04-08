@@ -16,8 +16,7 @@ function KanbanPage() {
 
   // ! in progress
   const handleOpenTaskModal = () => {
-    // setIsTaskModalOpen(true);
-    console.log('Hello from openTaskModal handler');
+    setIsTaskModalOpen(true);
   };
 
   // Load tasks from localStorage on first render (Initial render)
@@ -58,8 +57,6 @@ function KanbanPage() {
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board
           tasks={tasks}
-
-          // ! in progress
           onTaskClick={handleOpenTaskModal}
         />
 
@@ -70,8 +67,6 @@ function KanbanPage() {
           />
         }
 
-        // ! in progress
-        {/* TaskModal */}
         {isTaskModalOpen &&
           <TaskModal
             // task={selectedTask}
