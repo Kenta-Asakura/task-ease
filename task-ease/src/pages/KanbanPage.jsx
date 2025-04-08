@@ -5,8 +5,7 @@ import CreateTaskForm from "../components/Task/CreateTaskForm/CreateTaskForm";
 import TaskModal from '../components/Task/TaskModal/TaskModal';
 import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
 
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function KanbanPage() {
   const [tasks, setTasks] = useState([]);
@@ -69,6 +68,7 @@ function KanbanPage() {
 
         {isTaskModalOpen &&
           <TaskModal
+            setIsTaskModalOpen={setIsTaskModalOpen}
             // task={selectedTask}
           />
         }

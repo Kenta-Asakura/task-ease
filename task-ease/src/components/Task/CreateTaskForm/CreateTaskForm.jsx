@@ -30,7 +30,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
   };
 
   return (
-    <Modal id="form-overlay" onClose={() => setShowForm(false)} >
+    <Modal onClose={() => setShowForm(false)} >
       <form onSubmit={handleSubmit} className="flex items-center basis-6/12">
 
         <div className="editor

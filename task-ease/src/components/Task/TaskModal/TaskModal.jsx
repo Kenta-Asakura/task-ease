@@ -1,11 +1,12 @@
 import Modal from "../../ui/Modals/Modal";
 import StatusDropdown from "../../ui/Dropdown/StatusDropdown";
 
-function TaskModal() {
+function TaskModal({ setIsTaskModalOpen }) {
   return (
-    <Modal>
+    <Modal onClose={() => setIsTaskModalOpen(false)}>
       <form className="flex items-center">
-        <div className="
+        <div
+          className="
               flex basis-full justify-center flex-col gap-y-4 p-4
               bg-gray-800 border-gray-700
               border shadow-lg text-gray-800"
