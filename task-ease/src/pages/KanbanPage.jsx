@@ -11,12 +11,13 @@ import { useEffect } from 'react';
 function KanbanPage() {
   const [tasks, setTasks] = useState([]);
   const [showForm, setShowForm] = useState(false);
+  const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
   // const [selectedTask, setSelectedTask] = useState(null);
-  const [showTaskModal, setShowTaskModal] = useState(false);
 
-  const openTaskModal = (task) => {
-    // setSelectedTask(task);
-    setShowTaskModal(true);
+  // ! in progress
+  const handleOpenTaskModal = () => {
+    // setIsTaskModalOpen(true);
+    console.log('Hello from openTaskModal handler');
   };
 
   // Load tasks from localStorage on first render (Initial render)
@@ -57,7 +58,9 @@ function KanbanPage() {
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board
           tasks={tasks}
-          setShowTaskModal={openTaskModal}
+
+          // ! in progress
+          onTaskClick={handleOpenTaskModal}
         />
 
         {showForm &&
@@ -67,8 +70,9 @@ function KanbanPage() {
           />
         }
 
+        // ! in progress
         {/* TaskModal */}
-        {showForm &&
+        {isTaskModalOpen &&
           <TaskModal
             // task={selectedTask}
           />
@@ -78,6 +82,6 @@ function KanbanPage() {
       </div>
     </>
   )
-}
+};
 
 export default KanbanPage;

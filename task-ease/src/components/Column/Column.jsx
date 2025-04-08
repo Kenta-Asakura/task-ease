@@ -1,8 +1,9 @@
 import TaskCard from "../Task/TaskCard/TaskCard";
 
-function Column({ title, tasks }) {
+function Column({ title, tasks, onTaskClick }) {
   // test
   // console.log(tasks);
+  // console.log(onTaskClick);
 
   return (
     <div className="flex flex-col gap-4 min-w-[280px]">
@@ -12,13 +13,12 @@ function Column({ title, tasks }) {
         {/* <Task heading="Test Title" description="Test Description" />
         <Task heading="Test Title 2" description="Test Description 2" /> */}
 
-        {/* test */}
         {tasks.map((task) => ( // ?
           <TaskCard
             heading={task.title}
             description={task.description}
             key={task.id} // ?
-            
+            onTaskClick={onTaskClick}
           />
         ))};
       </div>

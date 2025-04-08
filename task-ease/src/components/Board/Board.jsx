@@ -1,6 +1,6 @@
 import Column from "../Column/Column";
 
-function Board({ tasks }) {
+function Board({ tasks, onTaskClick }) {
   const taskStatuses = ["Done", "Next", "Now", "New"];
 
   return (
@@ -13,6 +13,8 @@ function Board({ tasks }) {
             key={status}
             title={status}
             tasks={tasks.filter((task) => task.status === status)}
+            // * in progress
+            onTaskClick={onTaskClick}
           />
         ))}
       </div>
