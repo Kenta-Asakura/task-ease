@@ -1,7 +1,7 @@
 function StatusDropdown({ currentStatus, setStatus }) {
   return (
     <select
-      className="bg-gray-100 border border-gray-300 p-2 mb-4 outline-none"
+      className="bg-transparent border border-gray-300 p-2 mb-4 outline-none text-amber-50"
       value={currentStatus}
       onChange={(e) => setStatus(e.target.value)}
     >
