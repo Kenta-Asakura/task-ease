@@ -34,7 +34,7 @@ function CreateTaskForm({ setTasks, setShowForm }) {
       <form onSubmit={handleSubmit} className="flex items-center basis-6/12">
 
         <div className="editor
-            flex basis-full justify-center flex-col gap-y-4 p-4
+            flex basis-full flex-col gap-y-4 p-4
             bg-gray-800 border-gray-700
             border shadow-lg text-gray-800"
         >

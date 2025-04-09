@@ -12,7 +12,7 @@ function  Modal({ id, children, onClose }) {
     <div
       ref={overlayRef}
       className="fixed z-[500] inset-0
-        flex justify-center
+        flex justify-center items-center
         bg-black bg-opacity-30"
       onClick={handleOutsideClick}
     >
