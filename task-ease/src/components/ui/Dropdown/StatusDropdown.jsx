@@ -5,10 +5,10 @@ function StatusDropdown({ currentStatus, setStatus }) {
       value={currentStatus}
       onChange={(e) => setStatus(e.target.value)}
     >
-      <option value="New">New</option>
-      <option value="Now">Now</option>
-      <option value="Next">Next</option>
-      <option value="Done">Done</option>
+      <option className="bg-gray-800" value="New">New</option>
+      <option className="bg-gray-800" value="Now">Now</option>
+      <option className="bg-gray-800" value="Next">Next</option>
+      <option className="bg-gray-800" value="Done">Done</option>
     </select>
   )
 };
