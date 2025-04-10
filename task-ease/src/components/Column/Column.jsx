@@ -15,10 +15,10 @@ function Column({ title, tasks, onTaskClick }) {
 
         {tasks.map((task) => ( // ?
           <TaskCard
-            heading={task.title}
+            title={task.title}
             description={task.description}
             key={task.id} // ?
-            onTaskClick={onTaskClick}
+            onTaskClick={() => onTaskClick(task)}
           />
         ))};
       </div>

@@ -2,7 +2,9 @@ import Modal from "../../ui/Modals/Modal";
 import StatusDropdown from "../../ui/Dropdown/StatusDropdown";
 import EllipsisButton from "../../ui/Buttons/EllipsisButton";
 
-function TaskModal({ setIsTaskModalOpen }) {
+function TaskModal({ task, setIsTaskModalOpen }) {
+  const { id, title, description, status } = task;
+
   return (
     <Modal onClose={() => setIsTaskModalOpen(false)}>
       <form className="flex basis-6/12">
@@ -12,8 +14,7 @@ function TaskModal({ setIsTaskModalOpen }) {
                         text-white"
         >
           <div className="flex justify-between">
-            {/* Title */}
-            <h4>TEST From Modal</h4>
+            <h4>{title}</h4>
 
             {/* Ellipsis Btn */}
             <EllipsisButton></EllipsisButton>
@@ -22,7 +23,7 @@ function TaskModal({ setIsTaskModalOpen }) {
           {/* SubTasks */}
           <h5>Current Status</h5>
           <StatusDropdown
-            // currentStatus={status}
+            currentStatus={status}
             // setStatus={setStatus}
           />
         </div>

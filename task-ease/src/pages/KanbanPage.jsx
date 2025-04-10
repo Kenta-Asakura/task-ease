@@ -3,18 +3,20 @@ import NavBar from '../layout/NavBar/NavBar';
 import Board from "../components/Board/Board";
 import CreateTaskForm from "../components/Task/CreateTaskForm/CreateTaskForm";
 import TaskModal from '../components/Task/TaskModal/TaskModal';
-import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
+// import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
 
 import { useState, useEffect } from 'react';
 
 function KanbanPage() {
   const [tasks, setTasks] = useState([]);
   const [showForm, setShowForm] = useState(false);
+
   const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
-  // const [selectedTask, setSelectedTask] = useState(null);
+  const [selectedTask, setSelectedTask] = useState(null);
 
   // ! in progress
-  const handleOpenTaskModal = () => {
+  const handleTaskClick = (task) => {
+    setSelectedTask(task);
     setIsTaskModalOpen(true);
   };
 
@@ -56,7 +58,7 @@ function KanbanPage() {
       <div className="min-h-screen bg-gray-800 mt-[55px] md:mt-[64px] ">
         <Board
           tasks={tasks}
-          onTaskClick={handleOpenTaskModal}
+          onTaskClick={handleTaskClick}
         />
 
         {showForm &&
@@ -68,8 +70,8 @@ function KanbanPage() {
 
         {isTaskModalOpen &&
           <TaskModal
+            task={selectedTask}
             setIsTaskModalOpen={setIsTaskModalOpen}
-            // task={selectedTask}
           />
         }
 
