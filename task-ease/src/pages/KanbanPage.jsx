@@ -1,6 +1,8 @@
 import NavBar from '../layout/NavBar/NavBar';
 // import SideBar from '../components/SideBar';
 import Board from "../components/Board/Board";
+
+import TaskForm from '../components/Task/TaskForm/TaskForm';
 import CreateTaskForm from "../components/Task/CreateTaskForm/CreateTaskForm";
 import TaskModal from '../components/Task/TaskModal/TaskModal';
 // import EditTaskForm from '../components/Task/EditTaskForm/EditTaskForm';
@@ -14,7 +16,6 @@ function KanbanPage() {
   const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
 
-  // ! in progress
   const handleTaskClick = (task) => {
     setSelectedTask(task);
     setIsTaskModalOpen(true);
@@ -42,9 +43,14 @@ function KanbanPage() {
 
   // CRUD operations
   // - Create task
-  const addTask = (newTask) => {
-    setTasks((prevTasks) => [...prevTasks, newTask]);
-  }
+  // const addTask = (newTask) => {
+  //   setTasks((prevTasks) => [...prevTasks, newTask]);
+  // }
+
+  const handleCreateTask = (newTask) => {
+    setTasks(prevTasks => [...prevTasks, newTask]);
+    setShowForm(false);
+  };
 
   // - Update task
   // - Delete task
@@ -62,9 +68,15 @@ function KanbanPage() {
         />
 
         {showForm &&
-          <CreateTaskForm
-            setTasks={setTasks}
-            setShowForm={setShowForm}
+          // <CreateTaskForm
+          //   setTasks={setTasks}
+          //   // setShowForm={setShowForm}
+          //   onCancel={() => setShowForm(false)}
+          // />
+
+          <TaskForm
+            onSubmit={handleCreateTask}
+            onCancel={() => setShowForm(false)}
           />
         }
 

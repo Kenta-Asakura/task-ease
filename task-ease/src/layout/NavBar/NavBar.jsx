@@ -1,7 +1,6 @@
 import logo from "../../assets/task-ease.png";
 import EllipsisButton from "../../components/ui/Buttons/EllipsisButton";
 
-
 function NavBar({ toggleForm }) {
   return (
     <header className="fixed inset-0 flex z-[100] flex-row items-center h-[55px] md:h-[64px] px-4 md:px-6 bg-gray-700 shadow-sm">

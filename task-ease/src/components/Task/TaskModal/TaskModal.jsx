@@ -15,15 +15,17 @@ function TaskModal({ task, setIsTaskModalOpen }) {
         >
           <div className="flex justify-between">
             <h4>{title}</h4>
-
             {/* Ellipsis Btn */}
             <EllipsisButton></EllipsisButton>
           </div>
 
           {/* SubTasks */}
+
           <h5>Current Status</h5>
+
           <StatusDropdown
             currentStatus={status}
+            // ! update status in progress
             // setStatus={setStatus}
           />
         </div>
