@@ -1,0 +1,33 @@
+.main-content {
+  max-width: 70%;
+  background-color: #262626;
+  border: 1px solid #404040;
+  padding: 16px;
+  text-align: left;
+}
+.main-content-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.main-content__left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+.main-content__left p {
+  font-size: 24px;
+}
+
+.main-content__right {
+  display: flex;
+}
+.main-content__right img {
+  height: 500px;
+  background-color: #262626;
+  border: 1px solid #FFFFFF;
+  object-fit: cover;
+}

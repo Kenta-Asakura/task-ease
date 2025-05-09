@@ -24,7 +24,7 @@ function KanbanPage() {
   // Load tasks from localStorage on first render (Initial render)
   useEffect(() => {
     // console.log("Before fetching tasks:", localStorage.getItem("tasks")); // Debugging
-    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];setIsTaskModalOpen
 
     // console.log("Loaded tasks:", storedTasks); // Debugging
     setTasks(storedTasks);

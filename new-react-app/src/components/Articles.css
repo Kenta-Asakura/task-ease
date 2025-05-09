@@ -1,0 +1,23 @@
+.articles {
+  max-width: 30%;
+  background-color: #262626;
+  border: 1px solid #747474;
+  padding: 16px;
+  overflow-y: auto;
+}
+.articles-list {
+  list-style: none;
+  padding: 0;
+}
+
+.articles-list li {
+  background-color: #404040;
+  border-color: #000000;
+  text-align: left;
+  overflow-y: auto;
+  margin-top: 16px;
+  padding: 8px;
+}
+.articles-list li h4 {
+  margin: 0;
+}
